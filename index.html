@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📰 Hacker News Reader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header>
+            <div class="header-left">
+                <h1>📰 HN Reader</h1>
+                <span class="badge">Hacker News</span>
+            </div>
+            <div class="header-right">
+                <button id="saved-toggle" class="btn-saved">⭐ Saved (<span id="saved-count">0</span>)</button>
+            </div>
+        </header>
+
+        <!-- Search & Filters -->
+        <div class="search-section">
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search stories by title..."
+                    autofocus
+                />
+                <button id="search-btn">🔍</button>
+            </div>
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="top">🔥 Top</button>
+                <button class="filter-tab" data-filter="new">🆕 New</button>
+                <button class="filter-tab" data-filter="ask">❓ Ask</button>
+                <button class="filter-tab" data-filter="show">📢 Show</button>
+                <button class="filter-tab" data-filter="jobs">💼 Jobs</button>
+            </div>
+        </div>
+
+        <!-- Status / Loading -->
+        <div id="status" class="status">Loading stories...</div>
+
+        <!-- Article List -->
+        <div id="article-list" class="article-list">
+            <!-- Injected by JS -->
+        </div>
+
+        <!-- Load More -->
+        <div class="load-more-container">
+            <button id="load-more-btn" class="btn-load-more">Load More</button>
+            <span id="page-info" class="page-info">Page 1</span>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>📡 Powered by <a href="https://hn.algolia.com/api" target="_blank">Algolia HN API</a> • Data from Hacker News</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
